@@ -8,24 +8,28 @@
 
 <ion-content [fullscreen]="true">
   <div class="login-form">
-    <form (submit)="login()">
-      <div id="username">
-        <ion-input color="light"
-         placeholder="أدخل اسم المستخدم"
-         type="text"
-         name="username"
-         [(ngModel)]="username">
-        </ion-input>
-      </div>
-      <div id="password">
-        <ion-input color="light"
-        placeholder="أدخل كلمة السر"
-        type="password"
-        name="password"
-        [(ngModel)]="password">
-        </ion-input>
-      </div>
-      <ion-button type="submit" id="subButton">تسجيل الدخول</ion-button>  
-    </form>
+    
+    <ion-item lines="full" id="usernameinput">
+      <ion-input color="light"
+        placeholder="أدخل اسم المستخدم"
+        type="text"
+        name="username"
+        id="user_name"
+        [(ngModel)]="username"
+        required="true">
+      </ion-input>
+    </ion-item>
+    <ion-item lines="full" id="passwordinpu">
+      <ion-input color="light"
+      placeholder="أدخل كلمة السر"
+      type="password"
+      name="password"
+      id="user_password"
+      [(ngModel)]="password"
+      required="true">
+      </ion-input>
+    </ion-item>
+
+    <ion-button type="submit" id="subButton" (click)="login()">تسجيل الدخول</ion-button>  
   </div>
 </ion-content>

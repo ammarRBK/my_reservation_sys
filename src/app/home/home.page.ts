@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton } from '@ionic/angular/standalone';
+import { Router } from '@angular/router';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonItem } from '@ionic/angular/standalone';
 
 
 @Component({
@@ -8,14 +9,22 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton } from
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonButton, IonInput, IonHeader, IonToolbar, IonTitle, IonContent, FormsModule],
+  imports: [IonItem, IonButton, IonInput, IonHeader, IonToolbar, IonTitle, IonContent, FormsModule],
 })
 export class HomePage {
   username!: string;
   password!: string;
-  constructor() {}
+  constructor(private router: Router) {}
   
-  login(){
-    console.log(this.username, this.password)
+  login(){ 
+      if('OdaiWaMahmoud' === this.username){
+        if(this.password == 'U2PWp*eMQ8VC5JT'){
+          console.log('user authed');
+        }else{
+          console.log("wrong password");
+        }
+      }else{
+        console.log('wrong username');
+      }
   }
 }
