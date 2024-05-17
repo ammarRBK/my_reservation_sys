@@ -19,7 +19,7 @@ export class HomePage {
   login(){ 
       if('OdaiWaMahmoud' === this.username){
         if(this.password == 'U2PWp*eMQ8VC5JT'){
-          console.log('user authed');
+          this.router.navigateByUrl('reservsyslogin')
         }else{
           console.log("wrong password");
         }

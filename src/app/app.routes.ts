@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'reservsyslogin',
+    loadComponent: () => import('./reservsyslogin/reservsyslogin.page').then( m => m.ReservsysloginPage)
+  },
 ];
