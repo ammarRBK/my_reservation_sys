@@ -1,11 +1,31 @@
-<ion-header [translucent]="false">
+<ion-header [translucent]="true">
   <ion-toolbar class="mytoolbar">
     <ion-title>
-      Blank
+      تسجيل الدخول
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <div class="login-form">
+    <form (submit)="login()">
+      <div id="username">
+        <ion-input color="light"
+         placeholder="أدخل اسم المستخدم"
+         type="text"
+         name="username"
+         [(ngModel)]="username">
+        </ion-input>
+      </div>
+      <div id="password">
+        <ion-input color="light"
+        placeholder="أدخل كلمة السر"
+        type="password"
+        name="password"
+        [(ngModel)]="password">
+        </ion-input>
+      </div>
+      <ion-button type="submit" id="subButton">تسجيل الدخول</ion-button>  
+    </form>
+  </div>
 </ion-content>
