@@ -35,3 +35,11 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import '@ionic/angular/css/palettes/dark.system.css';
+
+ion-content{
+    --background: url('./assets/night.png') center/cover fixed no-repeat;
+}
+
+ion-toolbar{
+    --background: rgba(0, 102, 255, 0.603);
+}
